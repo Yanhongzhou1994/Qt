@@ -13,15 +13,20 @@ public:
 signals:
     void signal_fun_no_param();
     void signal_fun_with_param(int);
+    void signal_fun_with_param(int ,int );
 
 public slots:
     void receive_no_param()
     {
         qDebug()<<"the slots received the no param function"<<endl;
     }
-    void receive_wit_param(int num)
+    void receive_with_param(int num)
     {
         qDebug()<<num<<endl;
+    }
+    void receive_with_param(int num_one,int num_two )
+    {
+        qDebug()<<num_one<<" "<<num_two<<endl;
     }
 private slots:
     void receive_self_signal()
